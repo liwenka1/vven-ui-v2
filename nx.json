@@ -1,0 +1,11 @@
+{
+	"extends": "nx/presets/npm.json",
+	"targetDefaults": {
+		"build": {
+			"cache": true
+		}
+	},
+	"affected": {
+		"defaultBase": "master"
+	}
+}
