@@ -2,12 +2,6 @@
   "name": "@vven/ui",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "build": "tsup src --dts",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -15,8 +9,6 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "react": "^18",
-    "react-dom": "^18",
-    "tailwindcss": "^3.3.0",
-    "tsup": "^8.0.1"
+    "react-dom": "^18"
   }
 }

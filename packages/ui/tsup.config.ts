@@ -1,8 +1,8 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-	entry: ["src/index.ts"],
-	splitting: false,
-	sourcemap: true,
 	clean: true,
+	target: "esnext",
+	format: ["cjs", "esm"],
+	banner: { js: '"use client";' },
 });

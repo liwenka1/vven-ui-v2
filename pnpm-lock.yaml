@@ -17,9 +17,12 @@ importers:
 
   apps/web:
     dependencies:
-      '@vven/ui':
+      '@vven-ui/avatar':
         specifier: workspace:*
-        version: link:../../packages/ui
+        version: link:../../packages/ui/avatar
+      '@vven-ui/button':
+        specifier: workspace:*
+        version: link:../../packages/ui/button
       next:
         specifier: 14.0.4
         version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
@@ -52,26 +55,17 @@ importers:
         specifier: ^5
         version: 5.3.3
 
-  packages/ui:
+  packages/ui/avatar:
     devDependencies:
-      '@types/react':
-        specifier: ^18
-        version: 18.2.48
-      '@types/react-dom':
-        specifier: ^18
-        version: 18.2.18
-      react:
-        specifier: ^18
-        version: 18.2.0
-      react-dom:
-        specifier: ^18
-        version: 18.2.0(react@18.2.0)
-      tailwindcss:
-        specifier: ^3.3.0
-        version: 3.4.1
       tsup:
         specifier: ^8.0.1
-        version: 8.0.1(postcss@8.4.33)
+        version: 8.0.1
+
+  packages/ui/button:
+    devDependencies:
+      tsup:
+        specifier: ^8.0.1
+        version: 8.0.1
 
 packages:
 
@@ -3081,6 +3075,7 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
+    dev: false
 
   /lru-cache@10.1.0:
     resolution: {integrity: sha512-/1clY/ui8CzjKFyjdvwPWJUYKiFVXG2I2cY0ssG7h4+hwk+XOIX7ZSG9Q7TW8TW3Kp3BUSqgFWBLgL4PJ+Blag==}
@@ -4182,6 +4177,7 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
 
   /react-is@18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
@@ -4192,6 +4188,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
 
   /read-cache@1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
@@ -4431,6 +4428,7 @@ packages:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
 
   /semver@5.7.2:
     resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}
@@ -4904,7 +4902,7 @@ packages:
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
 
-  /tsup@8.0.1(postcss@8.4.33):
+  /tsup@8.0.1:
     resolution: {integrity: sha512-hvW7gUSG96j53ZTSlT4j/KL0q1Q2l6TqGBFc6/mu/L46IoNWqLLUzLRLP1R8Q7xrJTmkDxxDoojV5uCVs1sVOg==}
     engines: {node: '>=18'}
     hasBin: true
@@ -4931,7 +4929,6 @@ packages:
       execa: 5.0.0
       globby: 11.1.0
       joycon: 3.1.1
-      postcss: 8.4.33
       postcss-load-config: 4.0.2(postcss@8.4.33)
       resolve-from: 5.0.0
       rollup: 4.9.5

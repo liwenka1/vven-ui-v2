@@ -12,7 +12,8 @@
 		"react": "^18",
 		"react-dom": "^18",
 		"next": "14.0.4",
-		"@vven/ui": "workspace:*"
+		"@vven-ui/avatar": "workspace:*",
+		"@vven-ui/button": "workspace:*"
 	},
 	"devDependencies": {
 		"typescript": "^5",
